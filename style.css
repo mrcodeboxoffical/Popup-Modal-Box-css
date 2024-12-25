@@ -1,0 +1,117 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'poppins', sans-serif;
+}
+.show-btn{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    height: 55px;
+    padding: 0 30px;
+    font-size: 20px;
+    font-weight: 400;
+    line-height: 55px;
+    cursor: pointer;
+    color: #fff;
+    background: #2980b9;
+    border-radius: 4px;
+    transition: all 0.3s ease;
+}
+.show-btn:hover{
+    background: #216999;
+}
+
+.background{
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    top: 0;
+    left: 0;
+    background: rgba(0, 0, 0, 0.5);
+    opacity: 0;
+    pointer-events: none;
+    transition: all 0.3s ease;
+}
+#check:checked ~ .background{
+    opacity: 1;
+    pointer-events: auto;
+}
+
+.alert-Bx{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    min-width: 450px;
+    background: #fff;
+    padding: 30px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    border-radius: 5px;
+    z-index: 5;
+    opacity: 0;
+    pointer-events: none;
+    transform: translate(-50%, -50%) scale(0.97);
+    transition: all 0.3s ease;
+}
+#check{
+    display: none;
+}
+#check:checked ~ .alert-Bx{
+    opacity: 1;
+    pointer-events: auto;
+    transform: translate(-50%, -50%) scale(0.97);
+}
+.alert-Bx .icon{
+    height: 100px;
+    width: 100px;
+    color: #f23b26;
+    border: 3px solid #f23b26;
+    border-radius: 50%;
+    line-height: 97px;
+    font-size: 50px;
+}
+.alert-Bx header{
+    font-size: 34px;
+    font-weight: 500;
+    margin: 10px 0;
+}
+.alert-Bx p{
+    font-size: 20px;
+}
+.alert-Bx .btns{
+    margin-top: 20px;
+}
+.alert-Bx label{
+    display: inline-flex;
+    background: #808080;
+    height: 55px;
+    padding: 0 30px;
+    font-size: 20px;
+    font-weight: 400;
+    line-height: 55px;
+    cursor: pointer;
+    color: #fff;
+    border-radius: 5px;
+    margin: 0 10px;
+    transition: all 0.3s ease;
+}
+.btns label:first-child{
+    background: #41c468;
+}
+.btns label:first-child:hover{
+    background: #4dc972;
+}
+.btns label:last-child{
+    background: #f23b26;
+}
+.btns label:last-child:hover{
+    background: #cc4132;
+}
